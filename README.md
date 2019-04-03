@@ -53,6 +53,15 @@ User Defined Variables
   <li>Attributes for which we allow a relaxed privacy. That is if the input option is "pf" and it is not achievable we can relax the constraints on the given fields</li>
 </ul>
 
+What the algorithm set for you
+<ul>
+  <li>The attribute whose domain has the highest cardinality</li>
+  <li>The maximum number of iteration to the highest cardinality so that only CardinalityException will be raised</li>
+  <li>Relaxed privacy dictionary is modified automatically by setting to 0 the field whose domain has the highest cardinality. In order to achieve a minimum level of privacy preservation at least a field must have this value set to 0</li>
+</ul>
+## Considerations on Constraints
+We implemented a constraint generation and a constraint solver components. The second one acts in a very easy way, i.e. it generates new values randomly according to the domain of the interested field and the set of costraints. This behaviour can be extended in many ways but this would lead to higher execution times.
+
 ## Additional Notes
 <ul>
   <li>A function that exports the new dataset in .csv format is provided</li>
