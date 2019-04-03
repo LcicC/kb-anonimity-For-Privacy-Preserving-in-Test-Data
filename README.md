@@ -27,12 +27,10 @@ We provide an example dataset:
 
 <i>https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work</i>
 
-In order to use a different dataset, the user has to change different values. For the sake of simplicity we grouped all the elements to be 
-changed inside a single file which is already written for the example dataset and that can be use as a guide.
-The algorithm works on numerical attributes, we recommend to normalize floating point values to integer ones to aviod roundings. Categorical 
-fileds that are saved as strings can be turned into numbers.
+In order to use a different dataset, the user has to change different values. For the sake of simplicity we grouped all the elements to be changed inside specific files (function_to_test, user_variables) that are already written for the example dataset and that can be used as a guide.
+The algorithm works on numerical attributes, we recommend to normalize floating point values to integer ones to aviod roundings. Categorical fileds that are saved as strings can be turned into numbers.
 
-For what concerns the program to test, we provide also a simple example function which is again in the file above. As it can be noticed, 
+For what concerns the program to test, we provide also a simple example function which is again in the files above. As it can be noticed, 
 if the user wants to write his own program he needs to label all the conditional branches in the way it is done in the example.
 
 The output dataset is provided in <i>.csv</i> format.
@@ -40,3 +38,17 @@ The output dataset is provided in <i>.csv</i> format.
 ## Input Parameters and User Defined Values
 
 Here you can find a detailed list of the input parameters and the value that the user must change to change dataset/program.
+
+Program Input
+<ul>
+  <li>Dataset Name</li>
+  <li>K: Level of anonymization. That is the least accepted cardinality for a given bucket</li>
+  <li>Option: "pt" or "pf". That is how much privacy we want to preserve </li>
+</ul>
+
+User Defined Variables
+<ul>
+  <li>Number of conditions inside the test program</li>
+  <li>Cardinalities of the attributes involved in conditional branches</li>
+  <li>Attributes for which we allow a relaxed privacy. That is if the input option is "pf" and it is not achievable we can relax the constraints on the given fields</li>
+</ul>
