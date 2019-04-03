@@ -52,3 +52,11 @@ User Defined Variables
   <li>Cardinalities of the attributes involved in conditional branches</li>
   <li>Attributes for which we allow a relaxed privacy. That is if the input option is "pf" and it is not achievable we can relax the constraints on the given fields</li>
 </ul>
+
+## Additional Notes
+<ul>
+  <li>A function that exports the new dataset in .csv format is provided</li>
+  <li>For each bucket a new tuple is created (this number can be easily changed)</li>
+  <li>To test the program we suggest to run it with k=1 and then feed the program with the new dataset to check wether the same paths are taken</li>
+  <li>Remember that booleans cannot be anonymized due to behaviour preserving</li>
+</ul>
